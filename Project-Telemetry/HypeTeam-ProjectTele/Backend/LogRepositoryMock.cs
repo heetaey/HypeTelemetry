@@ -98,10 +98,10 @@ namespace HypeTeam_ProjectTele.Backend
         /// </summary>
         public void Initialize()
         {
-            dataset.Add(new LogModel { AppVersion = "1", PhoneID = "ABC", RecordedDateTime = DateTime.Now });
-            dataset.Add(new LogModel { AppVersion = "2", PhoneID = "MNO", RecordedDateTime = DateTime.Parse("01/23/2019") });
-            dataset.Add(new LogModel { AppVersion = "3", PhoneID = "ZYX", RecordedDateTime = DateTime.Now.AddDays(-2) });
-            dataset.Add(new LogModel { AppVersion = "3.3", PhoneID = "ZYXa", RecordedDateTime = DateTime.Now.AddYears(-1) });
+            dataset.Add(new LogModel { AppVersion = "1", PhoneID = "ABC", Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { AppVersion = "2", PhoneID = "MNO", Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { AppVersion = "3", PhoneID = "ZYX", Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { AppVersion = "3.3", PhoneID = "ZYXa", Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria" });
         }
     }
 }

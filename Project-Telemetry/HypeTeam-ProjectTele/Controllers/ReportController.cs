@@ -142,7 +142,7 @@ namespace HypeTeam_ProjectTele.Controllers
             "RecordedDateTime,"+
 
             "PhoneID," +
-            "EventType," +
+            "Location," +
             "Value," +
             "")] LogModel data)
         {

@@ -8,31 +8,29 @@
 <div class="container mt-3">
     <h2>Report</h2>
     <input class="form-control float-right" id="myInput" type="text" placeholder="Search by Keywords">
-    <table id="myTable" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-        <!--Table Head-->
+    <table id="myTable" class="table table-striped table-bordered table-sm">
         <thead class="thead-dark">
             <tr>
-                <th class="th-sm">
+                <th scope="col">
                     ID
                 </th>
-                <th class="th-sm">
+                <th scope="col">
                     Date
                 </th>
-                <th class="th-sm">
-                    App Version
-                </th>
-                <th class="th-sm">
-                    Phone ID
-                </th>
-                <th class="th-sm">
+                <th scope="col">
                     Bilirubin Level
                 </th>
-                <th class="th-sm">
+                <th scope="col">
+                    App Version
+                </th>
+                <th scope="col">
+                    Phone ID
+                </th>
+                <th scope="col">
                     Location
                 </th>
             </tr>
         </thead>
-        <!-- Table head-->
         <tbody>
             @{
                 foreach (var item in Model.LogViewModel.LogList)
@@ -40,12 +38,16 @@
                     <tr>
                         <td>@Html.ActionLink(item.ID, "Read", new { id = item.ID }, new { @class = "small" })</td>
                         <td>@item.RecordedDateTime.ToShortDateString()</td>
+                        <td>@item.Value</td>
                         <td>@item.AppVersion</td>
                         <td>@item.PhoneID</td>
-                        <td>@item.Value</td>
+                        <td>@item.Location</td>
                     </tr>
                 }
             }
         </tbody>
     </table>
+    <div>
+        @Html.ActionLink("Create", "Create", "Report", new { @class = "btn btn-outline-dark btn-sm" })
+    </div>
 </div>

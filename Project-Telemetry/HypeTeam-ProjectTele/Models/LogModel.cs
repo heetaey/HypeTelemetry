@@ -12,6 +12,7 @@ namespace HypeTeam_ProjectTele.Models
         public DateTime RecordedDateTime { get; set; } = DateTime.Now;
         public string PhoneID { get; set; }
         public string AppVersion { get; set; }
+        public string Location { get; set; }
         public LogModel()
         {
             Initialize();
@@ -37,6 +38,7 @@ namespace HypeTeam_ProjectTele.Models
             RecordedDateTime = data.RecordedDateTime;
             PhoneID = data.PhoneID;
             AppVersion = data.AppVersion;
+            Location = data.Location;
 
             return true;
         }
