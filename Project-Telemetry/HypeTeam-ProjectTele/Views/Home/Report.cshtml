@@ -4,49 +4,46 @@
 
 <div class="container mt-3">
     <h2>Report</h2>
-    <p>Type Location in the input field to search the table:</p>
-    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <input class="form-control" id="myInput" type="text" placeholder="Search...">
     <br>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>PatientID</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody id="myTable">
-            <tr>
-                <td>1</td>
-                <td>Kano</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Lagos</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Abuja</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Port Harcourt</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Kano</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Lagos</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Lagos</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Lagos</td>
-            </tr>
-        </tbody>
-    </table>
+    <table class="table table-striped">
+        <table id="myTable" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+            <!--Table Head-->
+            <thead>
+                <tr>
+                    <th class="th-sm">
+                        ID
+                    </th>
+                    <th class="th-sm">
+                        Date
+                    </th>
+                    <th class="th-sm">
+                        Bilirubin Level
+                    </th>
+                    <th class="th-sm">
+                        Age (Hours)
+                    </th>
+                    <th class="th-sm">
+                        Location
+                    </th>
+                </tr>
+            </thead>
+            <!-- Table head-->
+            <tbody>
+                <tr>
+                    <td>103194</td>
+                    <td>05/12/2019</td>
+                    <td>7</td>
+                    <td>40</td>
+                    <td>Lagos, Nigeria</td>
+                </tr>
+                <tr>
+                    <td>103813</td>
+                    <td>05/14/2019</td>
+                    <td>4</td>
+                    <td>32</td>
+                    <td>Abo, Nigeria</td>
+                </tr>
+            </tbody>
+        </table>
 </div>
