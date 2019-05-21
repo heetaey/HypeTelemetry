@@ -7,8 +7,8 @@ namespace HypeTeam_ProjectTele.Models
 {
     public class HomeViewModel
     {
-        public int LogCount;
-        public int PhoneCount;
-        public int OSCount;
+        public int LogCount { get; set; }
+        public int PhoneCount { get; set; }
+        public int OSCount { get; set; }
     }
 }
