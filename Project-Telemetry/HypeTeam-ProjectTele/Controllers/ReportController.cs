@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using HypeTeam_ProjectTele.Models;
 
 namespace HypeTeam_ProjectTele.Controllers
 {
-    public class HomeController : Controller
+    public class ReportController : Controller
     {
+        // GET: Report
         public ActionResult Index()
         {
-            var myData = new HomeViewModel
-            {
-                
-            };
             return View();
         }
     }
