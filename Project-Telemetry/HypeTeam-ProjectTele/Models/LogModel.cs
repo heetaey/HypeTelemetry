@@ -7,5 +7,32 @@ namespace HypeTeam_ProjectTele.Models
 {
     public class LogModel
     {
+        public string ID { get; set; } = Guid.NewGuid().ToString();
+        public string Value { get; set; }
+        public DateTime RecordedDateTime { get; set; } = DateTime.Now;
+        public string PhoneID { get; set; }
+        public string AppVersion { get; set; }
+        public LogModel()
+        {
+            Initialize();
+        }
+        public void Initialize()
+        {
+
+        }
+        public bool Update(LogModel data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            Value = data.Value;
+            RecordedDateTime = data.RecordedDateTime;
+            PhoneID = data.PhoneID;
+            AppVersion = AppVersion;
+
+            return true;
+        }
     }
 }
