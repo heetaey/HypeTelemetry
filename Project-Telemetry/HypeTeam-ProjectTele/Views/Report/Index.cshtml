@@ -1,4 +1,7 @@
-﻿@{
+﻿@using HypeTeam_ProjectTele.Models;
+@model ReportViewModel
+
+@{
     ViewBag.Title = "Index";
 }
 
@@ -16,10 +19,13 @@
                     Date
                 </th>
                 <th class="th-sm">
-                    Bilirubin Level
+                    App Version
                 </th>
                 <th class="th-sm">
-                    Age (Hours)
+                    Phone ID
+                </th>
+                <th class="th-sm">
+                    Bilirubin Level
                 </th>
                 <th class="th-sm">
                     Location
@@ -28,27 +34,18 @@
         </thead>
         <!-- Table head-->
         <tbody>
-            <tr>
-                <td>103194</td>
-                <td>05/12/2019</td>
-                <td>7</td>
-                <td>40</td>
-                <td>Lagos, Nigeria</td>
-            </tr>
-            <tr>
-                <td>103813</td>
-                <td>05/14/2019</td>
-                <td>4</td>
-                <td>32</td>
-                <td>Abo, Nigeria</td>
-            </tr>
-            <tr>
-                <td>193024</td>
-                <td>05/14/2019</td>
-                <td>5</td>
-                <td>24</td>
-                <td>Lagos, Nigeria</td>
-            </tr>
+            @{
+                foreach (var item in Model.LogViewModel.LogList)
+                {
+                    <tr>
+                        <td>@Html.ActionLink(item.ID, "Read", new { id = item.ID }, new { @class = "small" })</td>
+                        <td>@item.RecordedDateTime.ToShortDateString()</td>
+                        <td>@item.AppVersion</td>
+                        <td>@item.PhoneID</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

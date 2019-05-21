@@ -20,6 +20,12 @@ namespace HypeTeam_ProjectTele.Models
         {
 
         }
+
+        /// <summary>
+        /// Update fields passed in
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public bool Update(LogModel data)
         {
             if (data == null)
@@ -30,7 +36,7 @@ namespace HypeTeam_ProjectTele.Models
             Value = data.Value;
             RecordedDateTime = data.RecordedDateTime;
             PhoneID = data.PhoneID;
-            AppVersion = AppVersion;
+            AppVersion = data.AppVersion;
 
             return true;
         }
