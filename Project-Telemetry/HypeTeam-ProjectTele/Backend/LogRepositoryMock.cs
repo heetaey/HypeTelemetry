@@ -98,10 +98,32 @@ namespace HypeTeam_ProjectTele.Backend
         /// </summary>
         public void Initialize()
         {
-            dataset.Add(new LogModel {Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel {Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria" });
             dataset.Add(new LogModel {Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria" });
-            dataset.Add(new LogModel {Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel {Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria" });
             dataset.Add(new LogModel {Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "3.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria" });
+            dataset.Add(new LogModel { Value = "5.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria" });
+            dataset.Add(new LogModel { Value = "7.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "1.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria" });
+
+            dataset.Add(new LogModel { Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria" });
+            dataset.Add(new LogModel { Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria" });
+            dataset.Add(new LogModel { Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "3.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria" });
+            dataset.Add(new LogModel { Value = "5.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria" });
+            dataset.Add(new LogModel { Value = "7.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "1.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria" });
+
+            dataset.Add(new LogModel { Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria" });
+            dataset.Add(new LogModel { Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria" });
+            dataset.Add(new LogModel { Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "3.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria" });
+            dataset.Add(new LogModel { Value = "5.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria" });
+            dataset.Add(new LogModel { Value = "7.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria" });
+            dataset.Add(new LogModel { Value = "1.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria" });
         }
     }
 }
