@@ -21,12 +21,6 @@
                     Bilirubin Level
                 </th>
                 <th scope="col">
-                    App Version
-                </th>
-                <th scope="col">
-                    Phone ID
-                </th>
-                <th scope="col">
                     Location
                 </th>
             </tr>
@@ -39,8 +33,6 @@
                         <td>@Html.ActionLink(item.ID, "Read", new { id = item.ID }, new { @class = "small" })</td>
                         <td>@item.RecordedDateTime.ToShortDateString()</td>
                         <td>@item.Value</td>
-                        <td>@item.AppVersion</td>
-                        <td>@item.PhoneID</td>
                         <td>@item.Location</td>
                     </tr>
                 }
