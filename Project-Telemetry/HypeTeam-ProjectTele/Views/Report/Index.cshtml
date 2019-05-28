@@ -5,11 +5,11 @@
     ViewBag.Title = "Report";
 }
 
-<div class="container mt-3">
+<div class="table-responsive-xl">
     <h2>Report</h2>
-    <input class="form-control float-right" id="myInput" type="text" placeholder="Search by Keywords">
-    <table id="myTable" class="table table-striped table-bordered table-sm">
-        <thead class="thead-dark">
+    <table id="dataTable" class="table table-striped table-bordered w-auto">
+        <thead>
+            <tr>
             <tr>
                 <th scope="col">
                     ID
@@ -19,12 +19,6 @@
                 </th>
                 <th scope="col">
                     Bilirubin Level
-                </th>
-                <th scope="col">
-                    App Version
-                </th>
-                <th scope="col">
-                    Phone ID
                 </th>
                 <th scope="col">
                     Location
@@ -39,8 +33,6 @@
                         <td>@Html.ActionLink(item.ID, "Read", new { id = item.ID }, new { @class = "small" })</td>
                         <td>@item.RecordedDateTime.ToShortDateString()</td>
                         <td>@item.Value</td>
-                        <td>@item.AppVersion</td>
-                        <td>@item.PhoneID</td>
                         <td>@item.Location</td>
                     </tr>
                 }

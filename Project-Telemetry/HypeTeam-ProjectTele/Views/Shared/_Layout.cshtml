@@ -7,11 +7,12 @@
 
     <title>@ViewBag.Title - HypeTelemetry</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/addons/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
- >
+ 
 </head>
 <body>
     <!--<div class="navbar navbar-inverse navbar-fixed-top">-->
@@ -41,27 +42,20 @@
         <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
             @RenderBody()
             <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - HypeTelemtry</p>
+            <footer align="right">
+                <div>&copy; @DateTime.Now.Year - HypeTelemtry</div>
+                <div><a href="mailto: abc@seattleu.edu">Contact Admin</a></div>
             </footer>
         </div>
     </div>
 
-
     <script src="Scripts/popper.min.js"></script>
     <script src="Scripts/mdb.min.js"></script>
     <script src="Scripts/addons/datatables.min.js"></script>
-
-
-
     <script>
         $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
+            $('#dataTable').DataTable();
+            $('.dataTables_length').addClass('bs-select');
         });
     </script>
 </body>
