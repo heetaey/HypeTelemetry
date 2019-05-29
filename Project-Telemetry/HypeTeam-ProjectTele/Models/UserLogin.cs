@@ -10,13 +10,13 @@ namespace HypeTeam_ProjectTele.Models
 {
     public class UserLogin
     {
-        [Required(ErrorMessage = "Please enter your User ID.")]
-        [Display(Name = "Username : ")]
+        [Required(ErrorMessage = "Please enter your Username.")]
+        [Display(Name = "Username: ")]
         public string userID { get; set; }
 
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Please enter your Password.")]
-        [Display(Name = "Password : ")]
+        [Display(Name = "Password: ")]
         public string password { get; set; }
 
         public string username { get; set; }

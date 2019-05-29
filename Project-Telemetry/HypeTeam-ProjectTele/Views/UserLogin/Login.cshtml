@@ -4,47 +4,30 @@
     ViewBag.Title = "Login";
 }
 
-<h2>Login</h2>
-
 @using (Html.BeginForm())
 {
-    <table width="100%">
-        <tr>
-            <td align="center">
-                <table class="table-condensed">
-                    <tr>
-                        <td align="left">
-                            @Html.LabelFor(m => m.userID)
-                        </td>
-                        <td align="right">
-                            @Html.TextBoxFor(m => m.userID)
-                            <br />
-                            @Html.ValidationMessageFor(m => m.userID)
-                        </td>
-                    </tr>
+<div class="container mt-3">
+    <form action="/" method="post">
+        <h2>Log In to Dashboard</h2>
+        <div class="row">
+            <div class="col-1">
+                @Html.LabelFor(m => m.userID)
+            </div>
+            <div class="col-4">
+                @Html.TextBoxFor(m => m.userID, new { placeholder = "Username" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                @Html.LabelFor(m => m.password)
+            </div>
+            <div class="col-4">
+                @Html.TextBoxFor(m => m.password, new { placeholder = "Password" })
+            </div>
+        </div>
+        @Html.ActionLink("Login", "Index", "Home", new { @type = "submit", @class = "btn btn-outline-dark btn-sm" })
 
-                    <tr>
-                        <td align="left">
-                            @Html.LabelFor(m => m.password)
-                        </td>
-                        <td align="right">
-                            @Html.EditorFor(m => m.password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
-                            &nbsp;&nbsp;
-                            <br />
-                            @Html.ValidationMessageFor(m => m.password)
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2" align="center">
-                            <input type="submit" value="Login" class="btn btn-primary" />
-                        </td>
-                    </tr>
-                </table>
-                <br />
-                <br />
-                @ViewBag.ErrorMessage;
-            </td>
-        </tr>
-    </table>
+        @ViewBag.ErrorMessage
+    </form>
+</div>
 }
