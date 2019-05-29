@@ -138,6 +138,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\flags.png" />
+    <Content Include="Content\img\lab standard spectrometer.JPG" />
     <Content Include="Content\img\lightbox\default-skin.png" />
     <Content Include="Content\img\lightbox\default-skin.svg" />
     <Content Include="Content\img\lightbox\preloader.gif" />
@@ -244,6 +245,9 @@
     <None Include="Scripts\bootstrap.bundle.min.js.map" />
     <None Include="Scripts\bootstrap.js.map" />
     <None Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Views\Report\Read.cshtml" />
+    <Content Include="Views\Report\Update.cshtml" />
+    <Content Include="Views\Report\Delete.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -253,9 +257,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Report\Read.cshtml" />
-    <Content Include="Views\Report\Update.cshtml" />
-    <Content Include="Views\Report\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -266,10 +267,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
