@@ -291,6 +291,7 @@
     <None Include="Scripts\bootstrap.js.map" />
     <None Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Views\Report\Read.cshtml" />
+    <Content Include="Views\Report\Update.cshtml" />
     <Content Include="Views\Report\Delete.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -301,8 +302,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Report\Read.cshtml" />
     <Content Include="Views\Report\Update.cshtml" />
-    <Content Include="Views\UserLogin\Login.cshtml" />
+    <Content Include="Views\Report\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
