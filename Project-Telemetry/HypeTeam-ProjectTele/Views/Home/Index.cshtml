@@ -17,14 +17,19 @@
         </button>
     </div>
 </div>
-<div class="row">
-    <div class="col text-center">
-        <h4>Number of Logs</h4>
-        <h5>3</h5>
+<div class="row dashboard">
+    <div class="col">
+        <canvas id="myChart" height="80"></canvas>
     </div>
-    <div class="col text-center">
-        <h4>Top Operating Systems</h4>
-        <div class="row">
+</div>
+<div class="row dashboard">
+    <div class="col text-center mt-5">
+        <h5>Number of Logs</h5>
+        <h6 class="mt-5">3</h6>
+    </div>
+    <div class="col text-center mt-5">
+        <h5>Top Operating Systems</h5>
+        <div class="row mt-5">
             <div class="col">
                 <h6>1</h6>
             </div>
@@ -37,12 +42,38 @@
         </div>
 
     </div>
-    <div class="col text-center">
-        <h4>Top Locations</h4>
-        <div class="row">
+    <div class="col text-center mt-5">
+        <h5>Top Locations</h5>
+        <div class="row mt-5">
             <div class="col">1</div>
             <div class="col">Android 4.4</div>
             <div class="col">10</div>
         </div>
     </div>
 </div>
+
+<script>
+    var ctxL = document.getElementById("myChart").getContext('2d');
+    var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+                label: "Number of Patients",
+                data: [65, 59, 80, 81, 56, 5],
+                backgroundColor: [
+                    'rgba(105, 0, 132, .2)',
+                ],
+                borderColor: [
+                    'rgba(200, 99, 132, .7)',
+                ],
+                borderWidth: 2
+            },
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+</script>
