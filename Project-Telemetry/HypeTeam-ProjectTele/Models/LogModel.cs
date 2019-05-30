@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace HypeTeam_ProjectTele.Models
 {
     public class LogModel
@@ -13,6 +14,8 @@ namespace HypeTeam_ProjectTele.Models
         public string PhoneID { get; set; }
         public string AppVersion { get; set; }
         public string Location { get; set; }
+        public string UserID { get; set; }
+        public string PhoneHome { get; set; }
         public LogModel()
         {
             Initialize();
