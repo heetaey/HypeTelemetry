@@ -99,32 +99,32 @@ namespace HypeTeam_ProjectTele.Backend
         public void Initialize()
         {
 
-            dataset.Add(new LogModel { Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281" });
-            dataset.Add(new LogModel {Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
-            dataset.Add(new LogModel { Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231" });
-            dataset.Add(new LogModel {Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria", UserID = "3578", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528682" });
-            dataset.Add(new LogModel { Value = "3.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231" });
-            dataset.Add(new LogModel { Value = "5.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281" });
-            dataset.Add(new LogModel { Value = "7.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
-            dataset.Add(new LogModel { Value = "1.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
+            dataset.Add(new LogModel { Value = "12.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281", AppVersion = "2.01" });
+            dataset.Add(new LogModel {Value = "25.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "38.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231", AppVersion = "2.11" });
+            dataset.Add(new LogModel {Value = "32.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria", UserID = "3578", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528682", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "34.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "25.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "17.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "17.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
 
-            dataset.Add(new LogModel { Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281" });
-            dataset.Add(new LogModel { Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
-            dataset.Add(new LogModel { Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231" });
-            dataset.Add(new LogModel { Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria", UserID = "3578", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528682" });
-            dataset.Add(new LogModel { Value = "3.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231" });
-            dataset.Add(new LogModel { Value = "5.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281" });
-            dataset.Add(new LogModel { Value = "7.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
-            dataset.Add(new LogModel { Value = "1.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
+            dataset.Add(new LogModel { Value = "29.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "35.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "28.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "30.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria", UserID = "3578", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528682", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "23.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "15.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "27.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "21.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
 
-            dataset.Add(new LogModel { Value = "2.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281" });
-            dataset.Add(new LogModel { Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
-            dataset.Add(new LogModel { Value = "8.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231" });
-            dataset.Add(new LogModel { Value = "3.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria", UserID = "3578", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528682" });
-            dataset.Add(new LogModel { Value = "3.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231" });
-            dataset.Add(new LogModel { Value = "5.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281" });
-            dataset.Add(new LogModel { Value = "7.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
-            dataset.Add(new LogModel { Value = "1.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681" });
+            dataset.Add(new LogModel { Value = "28.1", RecordedDateTime = DateTime.Now, Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "5.2", RecordedDateTime = DateTime.Parse("01/23/2019"), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "18.5", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Abuja, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "4.6", RecordedDateTime = DateTime.Now.AddYears(-1), Location = "Lagos, Nigeria", UserID = "3578", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528682", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "29.0", RecordedDateTime = DateTime.Now.AddDays(-2), Location = "Dutse, Nigeria", UserID = "6749", PhoneHome = "Abuja, Nigeria", PhoneID = "99503231", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "25.5", RecordedDateTime = DateTime.Now.AddDays(-30), Location = "Aba, Nigeria", UserID = "1234", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "27405281", AppVersion = "2.11" });
+            dataset.Add(new LogModel { Value = "37.5", RecordedDateTime = DateTime.Now.AddDays(-95), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
+            dataset.Add(new LogModel { Value = "31.5", RecordedDateTime = DateTime.Now.AddDays(-82), Location = "Lagos, Nigeria", UserID = "3426", PhoneHome = "Port Harcourt, Nigeria", PhoneID = "53528681", AppVersion = "2.01" });
 
         }
     }
