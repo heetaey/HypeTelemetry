@@ -10,7 +10,7 @@
     </h2>
 
     <div class="row">
-        <div class="col-3 text-right">
+        <div class="col-3 text-left">
             Bilirubin Level
         </div>
         <div class="col">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="row">
-        <div class="col-3 text-right">
+        <div class="col-3 text-left">
             Phone ID
         </div>
         <div class="col">
@@ -27,9 +27,26 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-3 text-left">
+            User ID
+        </div>
+        <div class="col">
+            @Html.DisplayFor(m => m.UserID)
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-3 text-right">
+        <div class="col-3 text-left">
+            Home Office Location
+        </div>
+        <div class="col">
+            @Html.DisplayFor(m => m.PhoneHome)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3 text-left">
             Date
         </div>
         <div class="col">
@@ -38,6 +55,9 @@
     </div>
 
     <div class="jumbotron">
+        <h1>
+            Recorded Levels
+        </h1>
         <img src="~/Content/Img/lab standard spectrometer.JPG" class="mx-auto d-blosck img-fluid img-thumbnail" />
     </div>
 
