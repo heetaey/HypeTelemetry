@@ -2,10 +2,13 @@
 @model LogModel
 
 @{
-    ViewBag.Title = "Report Detail";
+    ViewBag.Title = "Read";
 }
 <div class="container mt-3">
+    <!-- Page Heading -->
     <h1 class="my-4">
+        <a href="#">Report</a>
+        <hr>
         <small>Patient ID > @Html.DisplayFor(m => m.ID)</small>
     </h1>
 
@@ -64,10 +67,6 @@
             </div>
         </div>
         <br />
-        <div>
-            <a href="javascript:history.back()">< Go Back</a>
-        </div>
-        <hr />
         <div>
             @Html.ActionLink("Update", "Update", "Report", new { id = Model.ID }, new { @class = "btn btn-warning" })
             @Html.ActionLink("Delete", "Delete", "Report", new { id = Model.ID }, new { @class = "btn btn-danger" })
