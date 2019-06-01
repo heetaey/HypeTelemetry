@@ -66,9 +66,13 @@
                 </div>
             </div>
         </div>
-        <br />
         <div>
-            @Html.ActionLink("Update", "Update", "Report", new { id = Model.ID }, new { @class = "btn btn-warning" })
-            @Html.ActionLink("Delete", "Delete", "Report", new { id = Model.ID }, new { @class = "btn btn-danger" })
+            <a href="javascript:history.back()">< Go Back</a>
         </div>
-    </div>
+        <hr />
+            <br />
+            <div>
+                @Html.ActionLink("Update", "Update", "Report", new { id = Model.ID }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Delete", "Delete", "Report", new { id = Model.ID }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
