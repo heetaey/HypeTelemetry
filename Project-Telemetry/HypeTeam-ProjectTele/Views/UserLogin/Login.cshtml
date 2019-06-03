@@ -4,10 +4,8 @@
     ViewBag.Title = "Login";
 }
 
-@using (Html.BeginForm())
-{
 <div class="container mt-3">
-    <form action="/" method="post">
+    <div>
         <h2>Log In to Dashboard</h2>
         <div class="row">
             <div class="col-1">
@@ -25,9 +23,6 @@
                 @Html.TextBoxFor(m => m.password, new { placeholder = "Password" })
             </div>
         </div>
-        @Html.ActionLink("Login", "Index", "Home", new { @type = "submit", @class = "btn btn-outline-dark btn-sm" })
-
-        @ViewBag.ErrorMessage
-    </form>
+        @Html.ActionLink("Login", "Index", "Home", null,new {  @class = "btn btn-outline-dark btn-sm" })
+    </div>
 </div>
-}
