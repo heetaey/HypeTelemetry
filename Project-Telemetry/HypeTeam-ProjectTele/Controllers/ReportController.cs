@@ -136,6 +136,7 @@ namespace HypeTeam_ProjectTele.Controllers
         /// <returns></returns>
         public ActionResult Update(string id = null)
         {
+            ViewData["Title"] = "Update Log " + id;
             var myData = LogBackend.Instance.Read(id);
             return View(myData);
         }
@@ -148,12 +149,12 @@ namespace HypeTeam_ProjectTele.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Update([Bind(Include =
-            "ID," +
-            "RecordedDateTime,"+
-
-            "PhoneID," +
-            "Location," +
             "Value," +
+            "Location," +
+            "UserID," +
+            "PhoneHome," +
+            "PhoneID," +
+            "AppVersion," +
             "")] LogModel data)
         {
             if (!ModelState.IsValid)

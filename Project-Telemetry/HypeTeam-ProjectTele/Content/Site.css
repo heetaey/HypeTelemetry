@@ -142,3 +142,26 @@ body {
 .dashboard .card-title {
     color: #696969;
 }
+
+.dataTables_filter {
+    width: 100%;
+}
+
+    .dataTables_filter label {
+        float: right;
+        text-align: right;
+        width: 100%;
+    }
+
+        .dataTables_filter label .form-control {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+.dataTables_length label {
+    width: 100%;
+}
+
+.dataTables_length .custom-select {
+    width: 100px;
+}

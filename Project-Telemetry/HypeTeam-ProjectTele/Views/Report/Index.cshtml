@@ -35,7 +35,19 @@
         </tbody>
     </table>
 
-    <div>
+    <div class="text-right">
         @Html.ActionLink("Create", "Create", "Report", new { @class = "btn btn-outline-dark btn-sm" })
     </div>
 </div>
+
+
+<script src="Scripts/addons/datatables.min.js"></script>
+<script>
+        $(document).ready(function () {
+            $('#dataTable').DataTable({
+                "pagingType": "numbers"
+            });
+            $('.dataTables_length').addClass('bs-select');
+            $('#dtMaterialDesignExample_wrapper .dataTables_length').addClass('d-flex flex-row');
+        });
+</script>

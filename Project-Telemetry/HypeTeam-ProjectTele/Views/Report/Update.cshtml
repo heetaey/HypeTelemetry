@@ -44,9 +44,10 @@
                     </div>
                 </div>
 
-
-                @Html.ActionLink("Cancel", "Read", "Report", new { id = Model.ID }, new { @class = "btn btn-outline-dark btn-sm" })
-                <input id="Submit" type="submit" value="Update" class="btn btn-outline-warning btn-sm" />
+                <div class="text-right">
+                    @Html.ActionLink("Cancel", "Read", "Report", new { id = Model.ID }, new { @class = "btn btn-outline-dark btn-sm" })
+                    <input id="Submit" type="submit" value="Update" class="btn btn-outline-warning btn-sm" />
+                </div>
             </div>
         </div>
     }
