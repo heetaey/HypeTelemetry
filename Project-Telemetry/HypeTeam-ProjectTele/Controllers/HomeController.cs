@@ -11,11 +11,13 @@ namespace HypeTeam_ProjectTele.Controllers
     {
         public ActionResult Index()
         {
+            ViewData["Title"] = "Dashboard";
+            var myViewModel = new ReportViewModel();
             var myData = new HomeViewModel
             {
                 
             };
-            return View();
+            return View(myData);
         }
     }
 }
