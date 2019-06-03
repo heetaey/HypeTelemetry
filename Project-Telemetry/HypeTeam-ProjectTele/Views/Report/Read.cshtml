@@ -2,44 +2,33 @@
 @model LogModel
 
 <div class="container mt-3">
-    <!-- Page Heading -->
-    <h1 class="my-4">
-        <a href="#">Report</a>
-        <hr>
-        <small>Patient ID > @Html.DisplayFor(m => m.ID)</small>
-    </h1>
-
+    <h2>Report</h2>
     <div class="row">
-        <div class="col-lg-6 mb-4">
-            <div class="card h-100">
+        <div class="col-sm-12 col-md-6 mb-4">
+            <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">
-                        <p>Patient Info</p>
-                    </h4>
+                    <h4 class="card-title">Patient Info</h4>
                     <hr>
                     <p class="card-text">Patient ID: @Html.DisplayFor(m => m.ID)</</p>
                     <p class="card-text">Report Date: @Html.DisplayFor(m => m.RecordedDateTime)</p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 mb-4">
-            <div class="card h-100">
+
+        <div class="col-sm-12 col-md-6 mb-4">
+            <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">
-                        <p>Device Info</p>
-                    </h4>
+                    <h4 class="card-title">Device Info</h4>
                     <hr>
                     <p class="card-text">Phone ID: @Html.DisplayFor(m => m.PhoneID)</</p>
                     <p class="card-text">Application Version: @Html.DisplayFor(m => m.AppVersion)</p>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 mb-4">
-            <div class="card h-100">
+        <div class="col-sm-12 col-md-6 mb-4">
+            <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">
-                        <p>Test Info</p>
-                    </h4>
+                    <h4 class="card-title">Test Info</h4>
                     <hr>
                     <p class="card-text">Bilirubin Level: @Html.DisplayFor(m => m.Value)</</p>
                     <p class="card-text">Recorded Levels</p>
@@ -47,12 +36,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 mb-4">
-            <div class="card h-100">
+        <div class="col-sm-12 col-md-6 mb-4">
+            <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">
-                        <p>Clinic Info</p>
-                    </h4>
+                    <h4 class="card-title">Clinic Info</h4>
                     <hr>
                     <p class="card-text">Clinic ID: @Html.DisplayFor(m => m.Value)</</p>
                     <p class="card-text">User ID: @Html.DisplayFor(m => m.UserID)</p>
@@ -64,12 +51,13 @@
             </div>
         </div>
         <div>
-            <a href="javascript:history.back()">< Go Back</a>
+            @Html.ActionLink("Go Back", "Index", "Report", new { @class = "btn btn-outline-dark btn-sm" })
         </div>
         <hr />
-            <br />
-            <div>
-                @Html.ActionLink("Update", "Update", "Report", new { id = Model.ID }, new { @class = "btn btn-warning" })
-                @Html.ActionLink("Delete", "Delete", "Report", new { id = Model.ID }, new { @class = "btn btn-danger" })
-            </div>
+        <br />
+        <div>
+            @Html.ActionLink("Update", "Update", "Report", new { id = Model.ID }, new { @class = "btn btn-outline-dark btn-sm" })
+            @Html.ActionLink("Delete", "Delete", "Report", new { id = Model.ID }, new { @class = "btn btn-outline-danger btn-sm" })
         </div>
+    </div>
+</div>

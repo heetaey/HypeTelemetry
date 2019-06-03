@@ -3,46 +3,49 @@
 
 <div class="container mt-3">
     <h2>Delete @Html.DisplayFor(m => m.ID)</h2>
-    <div class="row">
-        <div class="col-3 text-right">
-            @Html.DisplayNameFor(m => m.Value)
-        </div>
-        <div class="col">
-            @Html.DisplayFor(m => m.Value)
-        </div>
-    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group row">
+                <label for="Value" class="col-sm-3 col-form-label">Bilirubin Level</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(m => m.Value, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Bilirubin Level" } })
+                </div>
+            </div>
 
-    <div class="row">
-        <div class="col-3 text-right">
-            @Html.DisplayNameFor(m => m.PhoneID)
+            <div class="form-group row">
+                <label for="PhoneID" class="col-sm-3 col-form-label">Phone ID</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(m => m.PhoneID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Phone ID" } })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="AppVersion" class="col-sm-3 col-form-label">App Version</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(m => m.AppVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "App Version" } })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Location" class="col-sm-3 col-form-label">Location</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(m => m.Location, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Location" } })
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="UserID" class="col-sm-3 col-form-label">User ID</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(m => m.UserID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "User ID" } })
+                </div>
+            </div>
+
+            @using (Html.BeginForm(FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.ID)
+
+                @Html.ActionLink("Cancel", "Read", "Report", new { id = Model.ID }, new { @class = "btn btn-outline-dark btn-sm" })
+                <input id="Submit" type="submit" value="Delete" class="btn btn-outline-danger btn-sm" />
+            }
         </div>
-        <div class="col">
-            @Html.DisplayFor(m => m.PhoneID)
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-3 text-right">
-            @Html.DisplayNameFor(m => m.RecordedDateTime)
-        </div>
-        <div class="col">
-            @Html.DisplayFor(m => m.RecordedDateTime)
-        </div>
-    </div>
-
-
-    <br />
-    <br />
-    <div>
-        <h5>Do you want to delete this record?</h5>
-        @using (Html.BeginForm(FormMethod.Post))
-        {
-            @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.ID)
-
-            @Html.ActionLink("Cancel", "Index", "Report", new { @class = "btn btn-primary" })
-            <input id="Submit" type="submit" value="Delete" class="btn btn-danger" />
-        }
     </div>
 </div>
