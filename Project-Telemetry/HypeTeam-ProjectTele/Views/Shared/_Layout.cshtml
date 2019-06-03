@@ -73,10 +73,12 @@
 
                         else
                         {
-                            <li class="nav-item @(ControllerPage=="DashboardIndex" ? "active":"") ">
+                            <li class="nav-item @(ControllerPage=="HomeIndex" ? "active":"") ">
                                 @Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                             </li>
-                            <li class="nav-item @(ControllerPage=="ReportIndex" ? "active":"") ">
+                            <li class="nav-item @(ControllerPage=="ReportIndex" || ControllerPage=="ReportRead" 
+                                || ControllerPage=="ReportUpdate" || ControllerPage=="ReportDelete" || 
+                                ControllerPage=="ReportCreate" ? "active":"")">
                                 @Html.ActionLink("Report", "Index", "Report", new { area = "" }, new { @class = "nav-link" })
                             </li>
                         }

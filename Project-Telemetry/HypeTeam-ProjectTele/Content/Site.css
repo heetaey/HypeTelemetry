@@ -165,3 +165,9 @@ body {
 .dataTables_length .custom-select {
     width: 100px;
 }
+.nav-item .nav-link {
+    color: #696969;
+}
+.active .nav-link {
+    color: #000;
+}
