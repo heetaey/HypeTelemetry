@@ -42,6 +42,7 @@ namespace HypeTeam_ProjectTele.Models
             PhoneID = data.PhoneID;
             AppVersion = data.AppVersion;
             Location = data.Location;
+            UserID = data.UserID;
 
             return true;
         }

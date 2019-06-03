@@ -7,7 +7,7 @@ namespace HypeTeam_ProjectTele.Models
 {
     public class ReportViewModel
     {
-        public LogViewModel LogViewModel { get; set; }
+        public LogViewModel LogViewModel { get; set; } = new LogViewModel();
         public int NumberOfUsers { get; set; }
     }
 }

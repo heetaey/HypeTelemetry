@@ -12,6 +12,8 @@ namespace HypeTeam_ProjectTele.Controllers
     {
         public ActionResult Index()
         {
+            ViewData["Title"] = "Report";
+
             var myViewModel = new ReportViewModel();
 
             myViewModel.LogViewModel = LogBackend.Instance.Index();
@@ -27,6 +29,7 @@ namespace HypeTeam_ProjectTele.Controllers
         /// <returns></returns>
         public ActionResult Read(string id = null)
         {
+            ViewData["Title"] = "Report " + id;
             // If no ID passed in, jump to the Index page
             if (id == null)
             {
@@ -45,6 +48,7 @@ namespace HypeTeam_ProjectTele.Controllers
         [HttpGet]
         public ActionResult Delete(string id = null)
         {
+            ViewData["Title"] = "Delete " + id;
             // If no ID passed in, jump to the Index page
             if (id == null)
             {
@@ -64,6 +68,8 @@ namespace HypeTeam_ProjectTele.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed([Bind(Include = "ID")] string id)
         {
+            ViewData["Title"] = "Delete " + id;
+
             if (!ModelState.IsValid)
             {
                 return RedirectToAction("Index");
@@ -89,6 +95,7 @@ namespace HypeTeam_ProjectTele.Controllers
         /// <returns></returns>
         public ActionResult Create()
         {
+            ViewData["Title"] = "Create New Log";
             return View();
         }
 
@@ -100,9 +107,12 @@ namespace HypeTeam_ProjectTele.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include =
-            "PhoneID," +
-            "EventType," +
             "Value," +
+            "Location," +
+            "UserID," +
+            "PhoneHome," +
+            "PhoneID," +
+            "AppVersion," +
             "")] LogModel data)
         {
             if (!ModelState.IsValid)
