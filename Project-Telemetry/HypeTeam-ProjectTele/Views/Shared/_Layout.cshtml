@@ -18,32 +18,41 @@
 
 </head>
 <body>
+    @{
+        var page = "";
+        var ControllerPage = "";
+
+        var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
+
+        if (routeValues.ContainsKey("controller"))
+        {
+            ControllerPage = (string)routeValues["controller"];
+        }
+
+        if (routeValues.ContainsKey("action"))
+        {
+            page = (string)routeValues["action"];
+            ControllerPage = ControllerPage + page;
+        }
+    }
+
     <!--<div class="navbar navbar-inverse navbar-fixed-top">-->
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
         @Html.ActionLink("HypeTelemetry", "Index", "Home", new { area = "" }, new { @class = "navbar-brand col-sm-3 col-md-2 mr-0" })
         <ul class="navbar-nav ml-auto nav-flex-icons px-3">
             <li class="nav-item avatar">
-
-
                 @{
 
-                    var page = "";
-
-                    var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
-
-                    if (routeValues.ContainsKey("action"))
-                    {
-                        page = (string)routeValues["action"];
-                    }
 
                     if (page == "Login")
                     {
                         <span>Login</span>
                     }
+
                     else
                     {
                         <a class="nav-link p-0" href="#">
-                            Hello!
+                            Hello
                             <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
                                  alt="avatar image" height="35">
                         </a>
@@ -57,12 +66,20 @@
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            @Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
-                        </li>
-                        <li class="nav-item">
-                            @Html.ActionLink("Report", "Index", "Report", new { area = "" }, new { @class = "nav-link" })
-                        </li>
+                        @if (page == "Login")
+                        {
+
+                        }
+
+                        else
+                        {
+                            <li class="nav-item @(ControllerPage=="DashboardIndex" ? "active":"") ">
+                                @Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item @(ControllerPage=="ReportIndex" ? "active":"") ">
+                                @Html.ActionLink("Report", "Index", "Report", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                        }
                     </ul>
                 </div>
             </nav>
@@ -76,6 +93,5 @@
             </footer>
         </div>
     </div>
-
 </body>
 </html>

@@ -6,7 +6,7 @@
 
 <div class="container mt-3">
     <div>
-        <h2>Log In to Dashboard</h2>
+        <h2>Login to Dashboard</h2>
         <div class="row">
             <div class="col-1">
                 @Html.LabelFor(m => m.userID)
@@ -23,6 +23,6 @@
                 @Html.TextBoxFor(m => m.password, new { placeholder = "Password" })
             </div>
         </div>
-        @Html.ActionLink("Login", "Index", "Home", null,new {  @class = "btn btn-outline-dark btn-sm" })
+        @Html.ActionLink("Login", "Index", "Home", null, new { @class = "btn btn-outline-dark btn-sm" })
     </div>
 </div>
