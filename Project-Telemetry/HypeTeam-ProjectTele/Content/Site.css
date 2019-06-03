@@ -165,3 +165,8 @@ body {
 .dataTables_length .custom-select {
     width: 100px;
 }
+
+
+.active { 
+    font-weight: 500;
+}
