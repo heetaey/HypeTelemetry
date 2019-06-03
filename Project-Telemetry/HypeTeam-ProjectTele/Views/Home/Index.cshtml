@@ -4,55 +4,75 @@
 @{
     ViewBag.Title = "Dashboard";
 }
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Dashboard</h1>
-    <div class="btn-toolbar mb-2 mb-md-0">
-        <div class="btn-group mr-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+<div class="container dashboard">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                This week
+            </button>
         </div>
-        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            This week
-        </button>
     </div>
-</div>
-<div class="row dashboard">
-    <div class="col">
-        <canvas id="myChart" height="80"></canvas>
-    </div>
-</div>
-<div class="row dashboard">
-    <div class="col text-center mt-5">
-        <h5>Number of Logs</h5>
-        <h4 class="mt-5">3</h4>
-    </div>
-    <div class="col text-center mt-5">
-        <h5>Top Operating Systems</h5>
-        <div class="row mt-5">
-            <div class="col">
-                <h6>1</h6>
-            </div>
-            <div class="col">
-                <h6>Android 4.4</h6>
-            </div>
-            <div class="col">
-                <h6>10</h6>
-            </div>
-        </div>
 
+    <div class="row mb-4">
+        <div class="col dashboard">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h6 class="card-title">Overview</h6>
+                    <canvas id="myChart" height="80"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col text-center mt-5">
-        <h5>Top Locations</h5>
-        <div class="row mt-5">
-            <div class="col">
-                <h6>1</h6>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-12 text-center mb-4">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h6 class="card-title">Number of Logs</h6>
+                    <h4 class="mt-5">97</h4>
+                </div>
             </div>
-            <div class="col">
-                <h6>Lagos, Nigeria</h6>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center mb-4">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h6 class="card-title">Top Operating Systems</h6>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <p>1</p>
+                        </div>
+                        <div class="col">
+                            <p>Android 4.4</p>
+                        </div>
+                        <div class="col">
+                            <p>10</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <h6>10</h6>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center mb-4">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h6 class="card-title">Top Locations</h6>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <p>1</p>
+                        </div>
+                        <div class="col">
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                        <div class="col">
+                            <p>10</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
 ﻿body {
+    background: #ededed;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     padding-top: 50px;
@@ -132,3 +133,12 @@ body {
         border-color: transparent;
         box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
     }
+
+.chart {
+    background: #ffffff;
+    padding: 30px;
+}
+
+.dashboard .card-title {
+    color: #696969;
+}
