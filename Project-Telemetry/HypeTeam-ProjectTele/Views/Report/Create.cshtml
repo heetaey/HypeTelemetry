@@ -7,47 +7,47 @@
     {
         @Html.AntiForgeryToken()
         @Html.HiddenFor(m => m.ID)
-        
-    <div class="card">
-        <div class="card-body">
-            <div class="form-group row">
-                <label for="Value" class="col-sm-3 col-form-label">Bilirubin Level</label>
-                <div class="col-sm-9">
-                    @Html.EditorFor(m => m.Value, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Bilirubin Level" } })
-                </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="PhoneID" class="col-sm-3 col-form-label">Phone ID</label>
-                <div class="col-sm-9">
-                    @Html.EditorFor(m => m.PhoneID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Phone ID" } })
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <label for="Value" class="col-sm-3 col-form-label">Bilirubin Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.Value, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Bilirubin Level" } })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group row">
-                <label for="AppVersion" class="col-sm-3 col-form-label">App Version</label>
-                <div class="col-sm-9">
-                    @Html.EditorFor(m => m.AppVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "App Version" } })
+                <div class="form-group row">
+                    <label for="PhoneID" class="col-sm-3 col-form-label">Phone ID</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.PhoneID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Phone ID" } })
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="Location" class="col-sm-3 col-form-label">Location</label>
-                <div class="col-sm-9">
-                    @Html.EditorFor(m => m.Location, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Location" } })
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="UserID" class="col-sm-3 col-form-label">User ID</label>
-                <div class="col-sm-9">
-                    @Html.EditorFor(m => m.UserID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "User ID" } })
-                </div>
-            </div>
 
-            <div class="text-right">
-                @Html.ActionLink("Cancel", "Index", "Report", new { @class = "btn btn-outline-dark btn-sm" })
-                <input id="Submit" type="submit" value="Create" class="btn btn-outline-warning btn-sm" />
+                <div class="form-group row">
+                    <label for="AppVersion" class="col-sm-3 col-form-label">App Version</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.AppVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "App Version" } })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Location" class="col-sm-3 col-form-label">Location</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.Location, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Location" } })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="UserID" class="col-sm-3 col-form-label">User ID</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.UserID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "User ID" } })
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    @Html.ActionLink("Cancel", "Index", "Report", new { @class = "btn btn-outline-dark btn-sm" })
+                    <input id="Submit" type="submit" value="Create" class="btn btn-outline-warning btn-sm" />
+                </div>
             </div>
         </div>
-    </div>
     }
 </div>
