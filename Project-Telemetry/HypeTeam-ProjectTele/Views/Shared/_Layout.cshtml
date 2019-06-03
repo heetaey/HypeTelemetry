@@ -1,3 +1,4 @@
+﻿<<<<<<< HEAD
 ﻿<!DOCTYPE html>
 <html>
 <head>
@@ -94,4 +95,102 @@
         </div>
     </div>
 </body>
+=======
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/mdb.min.js"></script>
+
+    <title>@ViewBag.Title - HypeTelemetry</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/addons/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+    @{
+        var page = "";
+        var ControllerPage = "";
+
+        var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
+
+        if (routeValues.ContainsKey("controller"))
+        {
+            ControllerPage = (string)routeValues["controller"];
+        }
+
+        if (routeValues.ContainsKey("action"))
+        {
+            page = (string)routeValues["action"];
+            ControllerPage = ControllerPage + page;
+        }
+    }
+
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">-->
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        @Html.ActionLink("HypeTelemetry", "Index", "Home", new { area = "" }, new { @class = "navbar-brand col-sm-3 col-md-2 mr-0" })
+        <ul class="navbar-nav ml-auto nav-flex-icons px-3">
+            <li class="nav-item avatar">
+                @{
+
+
+                    if (page == "Login")
+                    {
+                        <span>Login</span>
+                    }
+
+                    else
+                    {
+                        <a class="nav-link p-0" href="#">
+                            Hello
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
+                                 alt="avatar image" height="35">
+                        </a>
+                    }
+                }
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        @if (page == "Login")
+                        {
+
+                        }
+
+                        else
+                        {
+                            <li class="nav-item @(ControllerPage=="DashboardIndex" ? "active":"") ">
+                                @Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item @(ControllerPage=="ReportIndex" ? "active":"") ">
+                                @Html.ActionLink("Report", "Index", "Report", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            @RenderBody()
+            <hr />
+            <footer align="right">
+                <div>&copy; @DateTime.Now.Year - HypeTelemtry</div>
+                <div><a href="mailto: abc@seattleu.edu">Contact Admin</a></div>
+            </footer>
+        </div>
+    </div>
+</body>
+>>>>>>> parent of 2b233e3... Erased the user name next to the avatar on the navbar
 </html>
