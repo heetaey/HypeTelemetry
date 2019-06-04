@@ -16,6 +16,7 @@ namespace HypeTeam_ProjectTele.Models
         public string Location { get; set; }
         public string UserID { get; set; }
         public string PhoneHome { get; set; }
+        public string OsVersion { get; set; }
         public LogModel()
         {
             Initialize();
@@ -43,6 +44,7 @@ namespace HypeTeam_ProjectTele.Models
             AppVersion = data.AppVersion;
             Location = data.Location;
             UserID = data.UserID;
+            OsVersion = data.OsVersion;
 
             return true;
         }

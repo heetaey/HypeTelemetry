@@ -113,6 +113,8 @@ namespace HypeTeam_ProjectTele.Controllers
             "PhoneHome," +
             "PhoneID," +
             "AppVersion," +
+            "OsVersion," +
+
             "")] LogModel data)
         {
             if (!ModelState.IsValid)
