@@ -3,26 +3,53 @@
 @{
     ViewBag.Title = "Login";
 }
+@{
+    Layout = null;
+}
 
-<div class="container mt-3">
-    <div>
-        <h2>Login to Dashboard</h2>
-        <div class="row">
-            <div class="col-1">
-                @Html.LabelFor(m => m.userID)
-            </div>
-            <div class="col-4">
-                @Html.TextBoxFor(m => m.userID, new { placeholder = "Username" })
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1">
-                @Html.LabelFor(m => m.password)
-            </div>
-            <div class="col-4">
-                @Html.TextBoxFor(m => m.password, new { placeholder = "Password" })
-            </div>
-        </div>
-        @Html.ActionLink("Login", "Index", "Home", null, new { @class = "btn btn-outline-dark btn-sm" })
+<head>
+    <title>Login to Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/signin.css" rel="stylesheet" />
+</head>
+
+<div class="form-signin">
+    <img class="mb-4" src="~/Content/img/logo.png" alt="" width="70%" height="auto">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
     </div>
+    <input type="button" class="btn btn-lg btn-primary btn-block" value="Sign in" onclick="location.href='@Url.Action("Index", "Home")'" />
 </div>
+
+@*<div class="container mt-3">
+        <div>
+            <h2>Login to Dashboard</h2>
+            <div class="row">
+                <div class="col-1">
+                    @Html.LabelFor(m => m.userID)
+                </div>
+                <div class="col-4">
+                    @Html.TextBoxFor(m => m.userID, new { placeholder = "Username" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    @Html.LabelFor(m => m.password)
+                </div>
+                <div class="col-4">
+                    @Html.TextBoxFor(m => m.password, new { placeholder = "Password" })
+                </div>
+            </div>
+            @Html.ActionLink("Login", "Index", "Home", null, new { @class = "btn btn-outline-dark btn-sm" })
+        </div>
+    </div>*@
