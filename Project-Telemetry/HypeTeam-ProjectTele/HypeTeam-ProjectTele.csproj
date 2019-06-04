@@ -152,6 +152,7 @@
     <Content Include="Content\img\lightbox\default-skin.png" />
     <Content Include="Content\img\lightbox\default-skin.svg" />
     <Content Include="Content\img\lightbox\preloader.gif" />
+    <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\overlays\01.png" />
     <Content Include="Content\img\overlays\02.png" />
     <Content Include="Content\img\overlays\03.png" />

@@ -110,6 +110,7 @@ body {
  */
 
 .navbar-brand {
+    background-image: url('img/logo.png');
     padding-top: .75rem;
     padding-bottom: .75rem;
     font-size: 1rem;
