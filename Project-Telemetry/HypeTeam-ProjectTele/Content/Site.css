@@ -157,6 +157,7 @@ body {
         .dataTables_filter label .form-control {
             display: inline-block;
             margin-left: 10px;
+            max-width: 300px;
         }
 
 .dataTables_length label {
