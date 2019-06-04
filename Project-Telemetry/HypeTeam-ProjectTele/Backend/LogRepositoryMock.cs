@@ -19,6 +19,7 @@ namespace HypeTeam_ProjectTele.Backend
             Initialize();
         }
 
+
         /// <summary>
         /// Add the log item to the data store
         /// </summary>
@@ -28,6 +29,11 @@ namespace HypeTeam_ProjectTele.Backend
         /// <returns>return the passed in log item</returns>
         public LogModel Create(LogModel data)
         {
+            if (data == null)
+            {
+                return null;
+            }
+
             dataset.Add(data);
             return data;
         }
@@ -41,7 +47,14 @@ namespace HypeTeam_ProjectTele.Backend
         public LogModel Read(String id)
         {
             // Get the first instance of the record
-            var myData = dataset.First(m => m.ID == id);
+            var myData = dataset.FirstOrDefault(m => m.ID == id);
+
+            if (myData == null)
+            {
+                return null;
+            }
+
+            // Found what was looking for, so all OK
             return myData;
         }
 
@@ -54,7 +67,7 @@ namespace HypeTeam_ProjectTele.Backend
         public LogModel Update(LogModel data)
         {
             // Get the first instance of the record
-            var myData = dataset.First(m => m.ID == data.ID);
+            var myData = Read(data.ID);
             if (myData == null)
             {
                 return null;
@@ -74,7 +87,7 @@ namespace HypeTeam_ProjectTele.Backend
         public Boolean Delete(String id)
         {
             // Get the first instance of the record
-            var myData = dataset.First(m => m.ID == id);
+            var myData = Read(id);
             if (myData == null)
             {
                 return false;
