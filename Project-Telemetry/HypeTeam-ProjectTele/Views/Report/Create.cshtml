@@ -2,9 +2,7 @@
 @model LogModel
 
 <div class="mt-3">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-        <h2>Create a New Log</h2>
-    </div>
+    <h2>Create</h2>
     @using (Html.BeginForm(FormMethod.Post))
     {
         @Html.AntiForgeryToken()
@@ -32,12 +30,49 @@
                         @Html.EditorFor(m => m.AppVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "App Version" } })
                     </div>
                 </div>
+
+                <div class="form-group row">
+                    <label for="OsVersion" class="col-sm-3 col-form-label">OS Version</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.OsVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "OS Version" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="LightLevel" class="col-sm-3 col-form-label">Light Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.LightLevel, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Light Level" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="SaturationLevel" class="col-sm-3 col-form-label">Saturation Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.SaturationLevel, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Saturation Level" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="HueLevel" class="col-sm-3 col-form-label">Hue Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.HueLevel, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Hue Level" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="ClinicID" class="col-sm-3 col-form-label">Clinic ID</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.ClinicID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Clinic ID" } })
+                    </div>
+                </div>
+
                 <div class="form-group row">
                     <label for="Location" class="col-sm-3 col-form-label">Location</label>
                     <div class="col-sm-9">
                         @Html.EditorFor(m => m.Location, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Location" } })
                     </div>
                 </div>
+
                 <div class="form-group row">
                     <label for="UserID" class="col-sm-3 col-form-label">User ID</label>
                     <div class="col-sm-9">
