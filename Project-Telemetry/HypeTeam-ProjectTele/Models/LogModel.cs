@@ -6,10 +6,29 @@ using System.Web;
 
 namespace HypeTeam_ProjectTele.Models
 {
+    public static class RandomGen2
+    {
+        private static Random _global = new Random();
+        [ThreadStatic]
+        private static Random _local;
+
+        public static int Next()
+        {
+            Random inst = _local;
+            if (inst == null)
+            {
+                int seed;
+                lock (_global) seed = _global.Next();
+                _local = inst = new Random(seed);
+            }
+            return inst.Next(0, 100000);
+        }
+    }
+
     public class LogModel
     {
         public string ID { get; set; } = Guid.NewGuid().ToString();
-        public string PatientID { get; set; } = new Random().Next(0, 10000).ToString("D6");
+        public string PatientID { get; set; } = RandomGen2.Next().ToString("D6");
         public string Value { get; set; }
         public DateTime RecordedDateTime { get; set; } = DateTime.Now;
         public string PhoneID { get; set; }
@@ -44,7 +63,6 @@ namespace HypeTeam_ProjectTele.Models
                 return false;
             }
             ID = data.ID;
-
             Value = data.Value;
             RecordedDateTime = data.RecordedDateTime;
             PhoneID = data.PhoneID;

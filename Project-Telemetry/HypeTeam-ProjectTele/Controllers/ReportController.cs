@@ -108,6 +108,7 @@ namespace HypeTeam_ProjectTele.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include =
             "Value," +
+            "PatientID," +
             "Location," +
             "UserID," +
             "PhoneHome," +
@@ -117,7 +118,7 @@ namespace HypeTeam_ProjectTele.Controllers
             "LightLevel," +
             "SaturationLevel," +
             "HueLevel," +
-            "ClnincID," +
+            "ClinicID," +
             "")] LogModel data)
         {
             if (!ModelState.IsValid)
