@@ -1,7 +1,7 @@
 ﻿@using HypeTeam_ProjectTele.Models;
 @model LogModel
 
-<div class="container mt-3">
+<div class="mt-3">
     <h2>Report</h2>
     <hr />
     <div class="row">
@@ -62,10 +62,8 @@
                     <p class="card-text">Clinic ID: @Html.DisplayFor(m => m.ClinicID)</</p>
                     <p class="card-text">User ID: @Html.DisplayFor(m => m.UserID)</p>
                     <p class="card-text">Location: @Html.DisplayFor(m => m.Location)</p>
-                    <iframe width="100%"
-                            height="300"
-                            frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4B1DjaKxOwMg0hm3j9OotSVe4PyEAXgk&q=@Html.DisplayFor(m => m.Location)"></iframe>
+                    <iframe frameborder="0" style="border:0; width:100%; height:300px"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4B1DjaKxOwMg0hm3j9OotSVe4PyEAXgk&q=@Html.DisplayFor(m => m.Location)"></iframe>
                 </div>
             </div>
         </div>
