@@ -9,6 +9,7 @@ namespace HypeTeam_ProjectTele.Models
     public class LogModel
     {
         public string ID { get; set; } = Guid.NewGuid().ToString();
+        public string PatientID { get; set; } = new Random().Next(0, 10000).ToString("D6");
         public string Value { get; set; }
         public DateTime RecordedDateTime { get; set; } = DateTime.Now;
         public string PhoneID { get; set; }
