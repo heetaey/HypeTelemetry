@@ -87,8 +87,14 @@ namespace HypeTeam_ProjectTele.Backend
         {
             var myData = new LogViewModel();
             myData.LogList = repository.Index();
-
             return myData;
+        }
+
+        public int numUser()
+        {
+            var myData = new LogViewModel();
+            var n = myData.LogList.Count;
+            return n;
         }
     }
 }

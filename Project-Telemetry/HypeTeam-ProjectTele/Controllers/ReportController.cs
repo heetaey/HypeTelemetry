@@ -17,7 +17,7 @@ namespace HypeTeam_ProjectTele.Controllers
             var myViewModel = new ReportViewModel();
 
             myViewModel.LogViewModel = LogBackend.Instance.Index();
-            myViewModel.NumberOfUsers = 3;
+            myViewModel.NumberOfUsers = LogBackend.Instance.numUser();
 
             return View(myViewModel);
         }
@@ -152,8 +152,7 @@ namespace HypeTeam_ProjectTele.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Update([Bind(Include =
-            "ID," +
-            "Value," +
+            "ID," +"Value," +
             "Location," +
             "UserID," +
             "PhoneHome," +
