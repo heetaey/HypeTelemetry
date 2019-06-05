@@ -215,3 +215,10 @@ body {
 #inputEmail {
     width: 100%;
 }
+
+.report-detail {
+    padding-left: 10px;
+}
+.report-detail li {
+    margin: 10px 0;
+}

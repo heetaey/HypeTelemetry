@@ -3,10 +3,9 @@
 
 <div class="mt-3 dashboard">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h2>Dashboard</h2>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
             </div>
             <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
@@ -16,103 +15,92 @@
         </div>
     </div>
 
-    <div class="row mb-4">
-        <div class="col dashboard">
-            <div class="card border-light">
-                <div class="card-body">
-                    <h6 class="card-title">Overview</h6>
-                    <canvas id="myChart" height="80"></canvas>
-                </div>
+    <div class="card-deck mb-3">
+        <div class="card border-light">
+            <div class="card-body">
+                <h6 class="card-title">Overview</h6>
+                <hr />
+                <canvas id="myChart" height="150"></canvas>
+            </div>
+        </div>
+        <div class="card border-light">
+            <div class="card-body">
+                <h6 class="card-title">Photo Uploads</h6>
+                <hr />
+                <canvas id="photoUploads"></canvas>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-4 col-md-12 text-center mb-4">
-            <div class="card border-light">
-                <div class="card-body">
-                    <h6 class="card-title">New Logs</h6>
-                    <div class="row mt-5">
-                        <div class="col">
-                            <p>
-                                06/01/2019
-                            </p>
-                        </div>
-                        <div class="col">
-                            <p>Lagos, Nigeria</p>
-                        </div>
-                        <div class="col">
-                            <p>2</p>
-                        </div>
-                        <div class="col">
-                            <p>
-                                06/02/2019
-                            </p>
-                        </div>
-                        <div class="col">
-                            <p>Dutse, Nigeria</p>
-                        </div>
-                        <div class="col">
-                            <p>1</p>
-                        </div>
-                    </div>
-                </div>
+
+    <div class="card-columns">
+        <div class="card border-light">
+            <div class="card-body">
+                <h6 class="card-title">New Logs</h6>
+                <hr />
+                <h3>32</h3>
             </div>
         </div>
-            
-        <div class="col-lg-4 col-md-12 text-center mb-4">
-            <div class="card border-light">
-                <div class="card-body">
-                    <h6 class="card-title">Operating Systems</h6>
-                    <canvas id="pieChart"></canvas>
+
+        <div class="card border-light">
+            <div class="card-body">
+                <h6 class="card-title">Operating Systems</h6>
+                <hr />
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card border-light">
+            <div class="card-body">
+                <h6 class="card-title">Locations</h6>
+                <hr />
+                <div class="row mt-5">
+                    <div class="col">
+                        <p>1</p>
+                    </div>
+                    <div class="col">
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                    <div class="col">
+                        <p>12</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>2</p>
+                    </div>
+                    <div class="col">
+                        <p>Aba, Nigeria</p>
+                    </div>
+                    <div class="col">
+                        <p>6</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>3</p>
+                    </div>
+                    <div class="col">
+                        <p>Abjua, Nigeria</p>
+                    </div>
+                    <div class="col">
+                        <p>3</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>4</p>
+                    </div>
+                    <div class="col">
+                        <p>Dutse, Nigeria</p>
+                    </div>
+                    <div class="col">
+                        <p>3</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-12 text-center mb-4">
-            <div class="card border-light">
-                <div class="card-body">
-                    <h6 class="card-title">Locations</h6>
-                    <div class="row mt-5">
-                        <div class="col">
-                            <p>1</p>
-                        </div>
-                        <div class="col">
-                            <p>Lagos, Nigeria</p>
-                        </div>
-                        <div class="col">
-                            <p>12</p>
-                        </div>
-                        <div class="col">
-                            <p>2</p>
-                        </div>
-                        <div class="col">
-                            <p>Aba, Nigeria</p>
-                        </div>
-                        <div class="col">
-                            <p>6</p>
-                        </div>
-                        <div class="col">
-                            <p>3</p>
-                        </div>
-                        <div class="col">
-                            <p>Abjua, Nigeria</p>
-                        </div>
-                        <div class="col">
-                            <p>3</p>
-                        </div>
-                        <div class="col">
-                            <p>4</p>
-                        </div>
-                        <div class="col">
-                            <p>Dutse, Nigeria</p>
-                        </div>
-                        <div class="col">
-                            <p>3</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
 
@@ -121,10 +109,10 @@
     var myLineChart = new Chart(ctxL, {
         type: 'line',
         data: {
-            labels: ["Sunday", "Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             datasets: [{
                 label: "Number of Patients",
-                data: [65, 59, 80, 81, 56, 5],
+                data: [21, 59, 80, 29, 46, 56, 5],
                 backgroundColor: [
                     'rgba(105, 0, 132, .2)',
                 ],
@@ -161,4 +149,42 @@
         }
     });
 
+
+    var ctx2 = document.getElementById("photoUploads").getContext('2d');
+    var myChart = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            datasets: [{
+                label: '# of Photo Uploads',
+                data: [12, 19, 3, 20, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
 </script>
