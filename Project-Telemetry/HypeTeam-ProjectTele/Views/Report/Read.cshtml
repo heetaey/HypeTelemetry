@@ -43,15 +43,12 @@
         <div class="col-sm-12 col-md-6 mb-4">
             <div class="card border-light">
                 <div class="card-body">
-                    <h6 class="card-title">Clinic Info</h6>
+                    <h6 class="card-title">Photo Info</h6>
                     <hr>
-                    <p class="card-text">Clinic ID: @Html.DisplayFor(m => m.Value)</</p>
-                    <p class="card-text">User ID: @Html.DisplayFor(m => m.UserID)</p>
-                    <p class="card-text">Location</p>
-                    <iframe width="100%"
-                            height="300"
-                            frameborder="0" style="border:0"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4B1DjaKxOwMg0hm3j9OotSVe4PyEAXgk&q=@Html.DisplayFor(m => m.Location)"></iframe>
+                    <p class="card-text">Light Level: @Html.DisplayFor(m => m.Value)</</p>
+                    <p class="card-text">Saturation Level: @Html.DisplayFor(m => m.Value)</</p>
+                    <p class="card-text">Recorded Photo: </p>
+                    <img src="~/Content/img/strip.PNG" class="mx-auto d-blosck img-fluid img-thumbnail" />
                 </div>
             </div>
         </div>
@@ -59,11 +56,15 @@
         <div class="col-sm-12 col-md-6 mb-4">
             <div class="card border-light">
                 <div class="card-body">
-                    <h6 class="card-title">Test Info</h6>
+                    <h6 class="card-title">Clinic Info</h6>
                     <hr>
-                    <p class="card-text">Bilirubin Level: @Html.DisplayFor(m => m.Value)</</p>
-                    <p class="card-text">Recorded Levels</p>
-                    <img src="~/Content/Img/lab standard spectrometer.JPG" class="mx-auto d-blosck img-fluid img-thumbnail" />
+                    <p class="card-text">Clinic ID: @Html.DisplayFor(m => m.Value)</</p>
+                    <p class="card-text">User ID: @Html.DisplayFor(m => m.UserID)</p>
+                    <p class="card-text">Location: @Html.DisplayFor(m => m.Location)</p>
+                    <iframe width="100%"
+                            height="300"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4B1DjaKxOwMg0hm3j9OotSVe4PyEAXgk&q=@Html.DisplayFor(m => m.Location)"></iframe>
                 </div>
             </div>
         </div>
