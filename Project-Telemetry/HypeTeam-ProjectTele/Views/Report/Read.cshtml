@@ -37,7 +37,7 @@
                     <li>Bilirubin Level: @Html.DisplayFor(m => m.Value)</li>
                     <li>
                         Recorded Levels:
-                        <img src="~/Content/Img/lab standard spectrometer.JPG" class="mx-auto d-blosck img-fluid img-thumbnail" />
+                        <img src="~/Content/img/bilirubin.jpg" class="mx-auto d-blosck img-fluid img-thumbnail" />
                     </li>
                 </ul>
             </div>
@@ -70,16 +70,6 @@
                 </ul>
             </div>
         </div>
-
-        <div class="card border-light">
-            <h6 class="card-header">Test Info</h6>
-            <div class="card-body">
-                <p class="card-text">Bilirubin Level: @Html.DisplayFor(m => m.Value)</</p>
-                <p class="card-text">Recorded Levels</p>
-                <img src="~/Content/Img/lab standard spectrometer.JPG" class="mx-auto d-blosck img-fluid img-thumbnail" />
-            </div>
-        </div>
-
     </div>
     <div class="float-left">
         @Html.ActionLink("Go Back", "Index", "Report", new { @class = "btn btn-outline-dark btn-sm" })
