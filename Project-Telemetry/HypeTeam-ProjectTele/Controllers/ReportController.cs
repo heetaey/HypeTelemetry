@@ -114,7 +114,10 @@ namespace HypeTeam_ProjectTele.Controllers
             "PhoneID," +
             "AppVersion," +
             "OsVersion," +
-
+            "LightLevel," +
+            "SaturationLevel," +
+            "HueLevel," +
+            "ClnincID," +
             "")] LogModel data)
         {
             if (!ModelState.IsValid)
@@ -152,12 +155,14 @@ namespace HypeTeam_ProjectTele.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Update([Bind(Include =
-            "ID," +"Value," +
+            "ID," +
+            "Value," +
             "Location," +
             "UserID," +
             "PhoneHome," +
             "PhoneID," +
             "AppVersion," +
+            "ClinicID," +
             "")] LogModel data)
         {
             if (!ModelState.IsValid)

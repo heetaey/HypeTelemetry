@@ -17,6 +17,11 @@ namespace HypeTeam_ProjectTele.Models
         public string UserID { get; set; }
         public string PhoneHome { get; set; }
         public string OsVersion { get; set; }
+        public string LightLevel { get; set; }
+        public string SaturationLevel { get; set; }
+        public string HueLevel { get; set; }
+        public string ClinicID { get; set; }
+
         public LogModel()
         {
             Initialize();
@@ -46,7 +51,11 @@ namespace HypeTeam_ProjectTele.Models
             Location = data.Location;
             UserID = data.UserID;
             OsVersion = data.OsVersion;
-            
+            LightLevel = data.LightLevel;
+            SaturationLevel = data.SaturationLevel;
+            HueLevel = data.HueLevel;
+            ClinicID = data.ClinicID;
+
             return true;
         }
     }

@@ -32,6 +32,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="UserID" class="col-sm-3 col-form-label">User ID</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.ClinicID, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Clinic ID" } })
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="Location" class="col-sm-3 col-form-label">Location</label>
                     <div class="col-sm-9">
                         @Html.EditorFor(m => m.Location, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Location" } })

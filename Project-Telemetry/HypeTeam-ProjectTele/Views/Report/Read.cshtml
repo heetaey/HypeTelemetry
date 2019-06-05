@@ -45,9 +45,10 @@
                 <div class="card-body">
                     <h6 class="card-title">Photo Info</h6>
                     <hr>
-                    <p class="card-text">Light Level: @Html.DisplayFor(m => m.Value)</</p>
-                    <p class="card-text">Saturation Level: @Html.DisplayFor(m => m.Value)</</p>
-                    <p class="card-text">Recorded Photo: </p>
+                    <p class="card-text">Light Level: @Html.DisplayFor(m => m.LightLevel)</</p>
+                    <p class="card-text">Saturation Level: @Html.DisplayFor(m => m.SaturationLevel)</</p>
+                    <p class="card-text">Hue Level: @Html.DisplayFor(m => m.HueLevel)</</p>
+                    <p class="card-text">Recorded Photo</p>
                     <img src="~/Content/img/strip.PNG" class="mx-auto d-blosck img-fluid img-thumbnail" />
                 </div>
             </div>
@@ -58,7 +59,7 @@
                 <div class="card-body">
                     <h6 class="card-title">Clinic Info</h6>
                     <hr>
-                    <p class="card-text">Clinic ID: @Html.DisplayFor(m => m.Value)</</p>
+                    <p class="card-text">Clinic ID: @Html.DisplayFor(m => m.ClinicID)</</p>
                     <p class="card-text">User ID: @Html.DisplayFor(m => m.UserID)</p>
                     <p class="card-text">Location: @Html.DisplayFor(m => m.Location)</p>
                     <iframe width="100%"
