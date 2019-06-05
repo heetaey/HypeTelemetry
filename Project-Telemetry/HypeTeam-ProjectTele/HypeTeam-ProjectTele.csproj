@@ -162,6 +162,11 @@
     <Content Include="Content\img\overlays\08.png" />
     <Content Include="Content\img\overlays\09.png" />
     <Content Include="Content\img\sample.jpg" />
+    <Content Include="Content\img\sort_asc.png" />
+    <Content Include="Content\img\sort_asc_disabled.png" />
+    <Content Include="Content\img\sort_both.png" />
+    <Content Include="Content\img\sort_desc.png" />
+    <Content Include="Content\img\sort_desc_disabled.png" />
     <Content Include="Content\img\svg\arrow_left.svg" />
     <Content Include="Content\img\svg\arrow_right.svg" />
     <Content Include="Content\img\svg\flags.png" />
@@ -186,6 +191,7 @@
     <Content Include="Scripts\addons\rating.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Report.pdf" />
     <None Include="Properties\PublishProfiles\HypeTelemetry - Web Deploy.pubxml" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />

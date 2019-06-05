@@ -28,13 +28,11 @@ div.dataTables_wrapper div.dataTables_length.d-flex.flex-row .select-wrapper.mdb
 div.dataTables_wrapper div.dataTables_length label {
   text-align: left;
   font-weight: normal;
-  padding-top: .5rem;
   padding-bottom: .5rem; }
 
 div.dataTables_wrapper div.dataTables_filter label {
-  text-align: left;
+  text-align: right;
   font-weight: normal;
-  padding-top: .5rem;
   padding-bottom: .5rem; }
 
 div.dataTables_wrapper div.dataTables_length select, div.dataTables_wrapper div.dataTables_length input {
@@ -45,7 +43,7 @@ div.dataTables_wrapper div.dataTables_filter {
   div.dataTables_wrapper div.dataTables_filter select {
     width: auto; }
   div.dataTables_wrapper div.dataTables_filter input {
-    width: auto;
+    width: 100%;
     margin-left: .5rem;
     display: inline-block; }
 
@@ -66,7 +64,7 @@ div.dataTables_wrapper div.dataTables_paginate {
     -ms-flex-pack: end;
     justify-content: flex-end; }
     div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item.active .page-link:focus {
-      background-color: #4285f4; }
+      }
     div.dataTables_wrapper div.dataTables_paginate ul.pagination .page-item .page-link:focus {
       -webkit-box-shadow: none;
       box-shadow: none; }
@@ -97,31 +95,31 @@ table.dataTable thead .sorting, table.dataTable thead .sorting_asc, table.dataTa
 
 table.dataTable thead .sorting:before, table.dataTable thead .sorting:after {
   position: absolute;
-  bottom: 0.9em;
+  bottom: 0.7em;
   display: block;
   opacity: 0.3; }
 
 table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after {
   position: absolute;
-  bottom: 0.9em;
+  bottom: 0.7em;
   display: block;
   opacity: 0.3; }
 
 table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after {
   position: absolute;
-  bottom: 0.9em;
+  bottom: 0.7em;
   display: block;
   opacity: 0.3; }
 
 table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after {
   position: absolute;
-  bottom: 0.9em;
+  bottom: 0.7em;
   display: block;
   opacity: 0.3; }
 
 table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
   position: absolute;
-  bottom: 0.9em;
+  bottom: 0.7em;
   display: block;
   opacity: 0.3; }
 
