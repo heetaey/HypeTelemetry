@@ -53,50 +53,8 @@
             <div class="card-body">
                 <h6 class="card-title">Locations</h6>
                 <hr />
-                <div class="row mt-5">
-                    <div class="col">
-                        <p>1</p>
-                    </div>
-                    <div class="col">
-                        <p>Lagos, Nigeria</p>
-                    </div>
-                    <div class="col">
-                        <p>12</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>2</p>
-                    </div>
-                    <div class="col">
-                        <p>Aba, Nigeria</p>
-                    </div>
-                    <div class="col">
-                        <p>6</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>3</p>
-                    </div>
-                    <div class="col">
-                        <p>Abjua, Nigeria</p>
-                    </div>
-                    <div class="col">
-                        <p>3</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>4</p>
-                    </div>
-                    <div class="col">
-                        <p>Dutse, Nigeria</p>
-                    </div>
-                    <div class="col">
-                        <p>3</p>
-                    </div>
-                </div>
+                <canvas id="doughnutChart"></canvas>
+
             </div>
         </div>
 
@@ -146,6 +104,10 @@
         },
         options: {
             responsive: true,
+            legend: {
+                display: false
+            }
+
         }
     });
 
@@ -186,5 +148,31 @@
                 }]
             }
         }
+    });
+
+    var ctxD = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctxD, {
+        type: 'doughnut',
+        data: {
+            labels: ["Lagos, Nigeria", "Aba, Nigeria", "Abuja, Nigeria", "Dutse, Nigeria"],
+            datasets: [{
+                data: [51, 23, 10, 12],
+                backgroundColor: ["rgba(219, 0, 0, 0.4)", "rgba(0, 165, 2, 0.4)", "rgba(255, 195, 15, 0.4)",
+                    "rgba(55, 59, 66, 0.4)"
+                ],
+                hoverBackgroundColor: ["rgba(219, 0, 0, 0.2)", "rgba(0, 165, 2, 0.2)",
+                    "rgba(255, 195, 15, 0.3)", "rgba(55, 59, 66, 0.1)"
+                ]
+
+            }]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                display: false
+            }
+        }
+        
+
     });
 </script>
