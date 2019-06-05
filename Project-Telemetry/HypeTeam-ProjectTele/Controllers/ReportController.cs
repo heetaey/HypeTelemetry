@@ -157,13 +157,33 @@ namespace HypeTeam_ProjectTele.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update([Bind(Include =
             "ID," +
+
             "Value," +
-            "Location," +
-            "UserID," +
-            "PhoneHome," +
-            "PhoneID," +
-            "AppVersion," +
-            "ClinicID," +
+                        "PhoneID," +
+                        "AppVersion," +
+                        "ClinicID," +
+                        "Location," +
+                        "UserID," +
+
+           "PatientID," +
+          "OsVersion," +
+            "LightLevel," +
+            "SaturationLevel," +
+            "HueLevel," +
+
+
+
+            //"ID," +
+            //"Value," +
+            //"Location," +
+            //"UserID," +
+            //"PhoneID," +
+            //"AppVersion," +
+            //"OsVersion," +
+            //"LightLevel," +
+            //"SaturationLevel," +
+            //"HueLevel," +
+            //"ClinicID," +
             "")] LogModel data)
         {
             if (!ModelState.IsValid)

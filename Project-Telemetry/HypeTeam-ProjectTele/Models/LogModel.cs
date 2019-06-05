@@ -62,9 +62,10 @@ namespace HypeTeam_ProjectTele.Models
             {
                 return false;
             }
+
             ID = data.ID;
             Value = data.Value;
-            RecordedDateTime = data.RecordedDateTime;
+            //RecordedDateTime = data.RecordedDateTime;
             PhoneID = data.PhoneID;
             AppVersion = data.AppVersion;
             Location = data.Location;

@@ -12,11 +12,11 @@
     {
         @Html.AntiForgeryToken()
         @Html.HiddenFor(m => m.ID)
-        @Html.HiddenFor(m => m.RecordedDateTime)
+        //@Html.HiddenFor(m => m.RecordedDateTime)
 
         <div class="card">
             <div class="card-body">
-                 <div class="form-group row">
+                <div class="form-group row">
                     <label for="Value" class="col-sm-3 col-form-label">Bilirubin Level</label>
                     <div class="col-sm-9">
                         @Html.EditorFor(m => m.Value, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Bilirubin Level" } })
@@ -34,6 +34,34 @@
                     <label for="AppVersion" class="col-sm-3 col-form-label">App Version</label>
                     <div class="col-sm-9">
                         @Html.EditorFor(m => m.AppVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "App Version" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="OsVersion" class="col-sm-3 col-form-label">OS Version</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.OsVersion, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "OS Version" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="LightLevel" class="col-sm-3 col-form-label">Light Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.LightLevel, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Light Level" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="SaturationLevel" class="col-sm-3 col-form-label">Saturation Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.SaturationLevel, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Saturation Level" } })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="HueLevel" class="col-sm-3 col-form-label">Hue Level</label>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(m => m.HueLevel, new { htmlAttributes = new { @class = "form-control form-control-sm", @placeholder = "Hue Level" } })
                     </div>
                 </div>
 
