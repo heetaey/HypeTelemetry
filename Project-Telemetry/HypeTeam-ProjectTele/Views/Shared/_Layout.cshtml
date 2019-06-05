@@ -1,18 +1,19 @@
 ﻿﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    <script src="~/Scripts/popper.min.js"></script>
-    <script src="~/Scripts/mdb.min.js"></script>
+
 
     <title>@ViewBag.Title - HypeTelemetry</title>
+
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/addons/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
@@ -37,10 +38,12 @@
     }
 
     @{
-        if (page == "Login") {
+        if (page == "Login")
+        {
             @RenderBody()
         }
-        else {
+        else
+        {
 
             <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0">
                 <a href="@Url.Action("Index", "Home")"><img src="~/Content/img/logo.png" alt="HypeTelemetry" class="hype-logo" /></a>
@@ -86,3 +89,4 @@
     }
 
 </body>
+</html>
