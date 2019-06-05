@@ -184,7 +184,7 @@ namespace HypeTeam_ProjectTele.Controllers
             //"SaturationLevel," +
             //"HueLevel," +
             //"ClinicID," +
-            "")] LogModel data)
+            "")] LogModel data, string id = null)
         {
             if (!ModelState.IsValid)
             {
@@ -198,7 +198,7 @@ namespace HypeTeam_ProjectTele.Controllers
             }
 
             var myData = LogBackend.Instance.Update(data);
-            return RedirectToAction("Index");
+            return RedirectToAction("Read/" + id);
         }
     }
 }
