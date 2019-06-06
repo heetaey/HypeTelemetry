@@ -29,6 +29,7 @@ namespace HypeTeam_ProjectTele.Models
     {
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public string PatientID { get; set; } = RandomGen2.Next().ToString("D6");
+        public int PatientAge { get; set; }
         public string Value { get; set; }
         public DateTime RecordedDateTime { get; set; } = DateTime.Now;
         public string PhoneID { get; set; }

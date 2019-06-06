@@ -109,6 +109,7 @@ namespace HypeTeam_ProjectTele.Controllers
         public ActionResult Create([Bind(Include =
             "Value," +
             "PatientID," +
+            "PatientAge," +
             "Location," +
             "UserID," +
             "PhoneHome," +
@@ -166,6 +167,7 @@ namespace HypeTeam_ProjectTele.Controllers
                         "UserID," +
 
            "PatientID," +
+                        "PatientAge," +
           "OsVersion," +
             "LightLevel," +
             "SaturationLevel," +
