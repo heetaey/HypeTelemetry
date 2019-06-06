@@ -222,3 +222,7 @@ body {
 .report-detail li {
     margin: 10px 0;
 }
+
+.new-logs .up-down {
+    color: #68be6c;
+}
