@@ -1,2 +1,2 @@
-# CPSC5051
-Hype team, Spring 2019
+## HypeTelemetry
+  HypeTelemetry helps Dr. Peculiar and non-profit Researchers to understand the impact they are making with up-to-date reports from the field regarding the neonatal jaundice disease. Through the creation of an optimized telemetry system, users will receive usage information from the mobile application, have access to data in a relational database, and realize real-world situations through regular reports, ultimately collecting crucial data for those overseeing Dr. Peculiar’s application and health initiative in real-time.
